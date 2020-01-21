@@ -18,7 +18,9 @@ class ImagesContainer extends Component {
 
   render() {
     if (this.props.imagesError) return <p>{this.props.imagesError}</p>
-    if (this.props.imagesLoading) return <Spinner />
+    if (this.props.imagesLoading) return <div className="ImageList"><Spinner /></div>
+    if (!this.props.imagesData.length) return null
+
     return <ImageList imagesData={this.props.imagesData} />
   }
 }

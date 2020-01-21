@@ -1,6 +1,5 @@
 .PhotographersList {
   grid-area: PhotographersList;
-  
 
   .PhotographersItemList {
     border: 1px solid #C2C2E5;
@@ -8,10 +7,10 @@
     padding: 0;
     margin: 0;
     
-
     .PhotographerItem {
       padding: 10px 20px;
       cursor: pointer;
+      
       &:hover {
         background-color: #E6E6FA;
       }

@@ -1,6 +1,5 @@
 .AlbumsList {
   grid-area: AlbumsList;
-  
 
   .AlbumsItemList {
     border: 1px solid #C2C2E5;
@@ -11,11 +10,12 @@
     .AlbumItem {
       padding: 10px 20px;
       cursor: pointer;
+
       &:hover {
         background-color: #E6E6FA;
       }
 
-      &+.AlbumItem {
+      & + .AlbumItem {
         border-top: 1px solid #D8D8FF ;
       }
     }

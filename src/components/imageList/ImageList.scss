@@ -3,16 +3,17 @@
   display: flex;
   flex-wrap: wrap;
 
-  img {
-    margin-bottom: 10px;
-    cursor: pointer;
+  .ItemBlock {
+    text-align: center;
+    flex-grow:1;
+
+    .ImageItem {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
   }
 
-  img:first-child {
-    margin-right: 10px;
-  }
-
-  img + img {
-    margin-right: 10px;
+  .Spinner {
+    margin-top: 0;
   }
 }

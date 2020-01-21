@@ -22,6 +22,8 @@ class PhotographersContainer extends Component {
   render() {
     if (this.props.photographersError) return <p>{this.props.photographersError}</p>
     if (this.props.photographersLoading) return <Spinner />
+    if (!this.props.photographersData.length) return null
+
     return (
       <PhotographersList
         photographersData={this.props.photographersData}

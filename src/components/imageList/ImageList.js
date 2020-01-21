@@ -2,12 +2,13 @@ import React from 'react';
 import './ImageList.scss';
 
 const ImageList = ({ imagesData }) => {
-  console.log(imagesData)
 
   return (
     <section className="ImageList">
       {imagesData.map(image => (
-        <img key={image.id} src={image.thumbnailUrl} alt="thumbnailImage" />
+        <div key={image.id} className="ItemBlock">
+          <img src={image.thumbnailUrl} alt="thumbnailImage" className="ImageItem" />
+        </div>
       ))}
     </section>
   );

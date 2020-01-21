@@ -30,6 +30,7 @@ class AlbumsContainer extends Component {
     if (this.props.albumsError) return <p>{this.props.albumsError}</p>
     if (this.props.albumsLoading) return <Spinner />
     if (!this.props.albumsData.length) return null
+
     return (
       <AlbumList
         albumsData={this.props.albumsData}

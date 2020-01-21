@@ -2,7 +2,6 @@ import React from 'react';
 import './PhotographersList.scss';
 
 const PhotographersList = ({ photographersData, photographerClickHandler, userId }) => {
-  console.log(userId)
 
   return (
     <section className="PhotographersList">
