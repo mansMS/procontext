@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setImagesList } from '../reducers/imagesData';
-import ImageList from '../components/imageList';
+import Images from '../components/images';
 import Spinner from '../components/spinner';
 
 class ImagesContainer extends Component {
@@ -18,10 +18,10 @@ class ImagesContainer extends Component {
 
   render() {
     if (this.props.imagesError) return <p>{this.props.imagesError}</p>
-    if (this.props.imagesLoading) return <div className="ImageList"><Spinner /></div>
+    if (this.props.imagesLoading) return <div className="Images"><Spinner /></div>
     if (!this.props.imagesData.length) return null
 
-    return <ImageList imagesData={this.props.imagesData} />
+    return <Images imagesData={this.props.imagesData} />
   }
 }
 

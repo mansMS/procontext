@@ -1,4 +1,4 @@
-import { getImageListt } from '../services/imagesDataService';
+import { getImageList } from '../services/imagesDataService';
 import { imagesDataRequested, imagesDataLoaded, imagesDataError } from '../actions';
 
 const initialState = {
@@ -35,7 +35,7 @@ export default (state = initialState, action) => {
 
 export const setImagesList = (id) => dispatch => {
   dispatch(imagesDataRequested());
-  getImageListt(id)
+  getImageList(id)
     .then(response => dispatch(imagesDataLoaded(response)))
     .catch(error => dispatch(imagesDataError(error.message)))
 }

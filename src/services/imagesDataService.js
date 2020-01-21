@@ -1,8 +1,8 @@
-import { getImageListtURL } from '../services/sourceURLs';
+import { getImageListURL } from '../services/sourceURLs';
 
-export const getImageListt = async imagesId => {
+export const getImageList = async imagesId => {
   try {
-    const response = await fetch(`${getImageListtURL}${imagesId}`);
+    const response = await fetch(`${getImageListURL}${imagesId}`);
     if (!response.ok) {
       throw new Error(`Ошибка загрузки ${response.status}`)
     } else {

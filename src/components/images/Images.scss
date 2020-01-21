@@ -1,0 +1,34 @@
+.Images {
+  grid-area: Images;
+
+  .ImagesList {
+    display: flex;
+    flex-wrap: wrap;
+  
+    .ItemBlock {
+      text-align: center;
+      flex-grow:1;
+  
+      .ImageItem {
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+
+      .SelectedImg {
+        position: relative;
+        display: inline-block;
+  
+        &:after {
+          content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 19px;
+          background: rgba(0,0,0,.6);
+          opacity: 1;
+        }
+      }
+    }    
+  }
+  
+  .Spinner {
+    margin-top: 0;
+  }
+}
+
