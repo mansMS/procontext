@@ -1,0 +1,11 @@
+.App {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 3fr 5fr;
+  grid-template-areas:
+    "PhotographersList AlbumsList"
+    "ImageList ImageList";
+    grid-gap: 2vw;
+}
