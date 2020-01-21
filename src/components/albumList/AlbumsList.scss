@@ -1,8 +1,9 @@
 .AlbumsList {
   grid-area: AlbumsList;
-  border: 1px solid #C2C2E5;
+  
 
   .AlbumsItemList {
+    border: 1px solid #C2C2E5;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -19,5 +20,8 @@
       }
     }
     
+    .activeItem {
+      background-color: #cfcfe1;
+    }
   }
 }

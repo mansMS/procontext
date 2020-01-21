@@ -1,7 +1,8 @@
 import React from 'react';
 import './PhotographersList.scss';
 
-const PhotographersList = ({ photographersData, photographerClickHandler }) => {
+const PhotographersList = ({ photographersData, photographerClickHandler, userId }) => {
+  console.log(userId)
 
   return (
     <section className="PhotographersList">
@@ -10,7 +11,11 @@ const PhotographersList = ({ photographersData, photographerClickHandler }) => {
           <li
             key={photographer.id}
             onClick={() => photographerClickHandler(photographer.id)}
-            className="PhotographerItem"
+            className={
+              photographer.id === userId
+                ? ["PhotographerItem", "activeItem"].join(' ')
+                : "PhotographerItem"
+            }
           >
             {photographer.name}
           </li>

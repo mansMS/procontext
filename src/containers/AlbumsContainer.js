@@ -29,16 +29,23 @@ class AlbumsContainer extends Component {
   render() {
     if (this.props.albumsError) return <p>{this.props.albumsError}</p>
     if (this.props.albumsLoading) return <Spinner />
+    if (!this.props.albumsData.length) return null
     return (
-      <AlbumList albumsData={this.props.albumsData} albumClickHandler={this.albumClickHandler} />
+      <AlbumList
+        albumsData={this.props.albumsData}
+        albumClickHandler={this.albumClickHandler}
+        albumId={this.props.albumId}
+      />
     )
 
   }
 }
 
-const mapStateToProps = ({ albumsData: { albumsData, albumsLoading, albumsError }, appData: { userId } }) => {
-
-  return { albumsData, albumsLoading, albumsError, userId }
+const mapStateToProps = ({
+  albumsData: { albumsData, albumsLoading, albumsError },
+  appData: { userId, albumId }
+}) => {
+  return { albumsData, albumsLoading, albumsError, userId, albumId }
 }
 
 export default connect(mapStateToProps, { setAlbumsList, setShowImages })(AlbumsContainer);

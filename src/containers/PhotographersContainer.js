@@ -26,15 +26,17 @@ class PhotographersContainer extends Component {
       <PhotographersList
         photographersData={this.props.photographersData}
         photographerClickHandler={this.photographerClickHandler}
+        userId={this.props.userId}
       />
     )
   }
 }
 
 const mapStateToProps = ({
-  photographersData: { photographersData, photographersLoading, photographersError }
+  photographersData: { photographersData, photographersLoading, photographersError },
+  appData: { userId }
 }) => {
-  return { photographersData, photographersLoading, photographersError }
+  return { photographersData, photographersLoading, photographersError, userId }
 }
 
 export default connect(mapStateToProps, { setPhotographersList, setShowAlbum })(PhotographersContainer);
